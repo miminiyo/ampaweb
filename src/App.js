@@ -1,23 +1,49 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react"
+
 import './App.css';
 
-function App() {
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer';
+
+import Image from "./components/Elements/Image";
+
+//import useFetch from './hooks/useFetch';
+
+const App = () => {
+  
+
+  const [users, setUsers] = useState([])
+  
+  const fetchUserData = () => {
+    fetch("http://localhost:8888/apiampa/wp-json/wp/v2/ventajas")
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setUsers(data)
+      })
+  }
+
+  useEffect(() => {
+    fetchUserData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+        <main>
+        {users.length > 0 && (
+          <ul>
+            {users.map(user => (
+              <li key={user.id}>
+                <Image/>
+                <p>{user.title.rendered}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        </main>
+      <Footer/>
     </div>
   );
 }
