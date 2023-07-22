@@ -1,0 +1,39 @@
+//variables
+$color-primary-light: #e5fcff;
+$color-gray-bg: #eeeeee;
+
+
+//menu mobile
+// .navbar-collapse{
+// 	&.show{
+// 		position: fixed;
+// 		height: 100vh;
+// 		width: 100vw;
+// 		top: 0;
+// 		left: 0;
+// 		background-color: white;
+// 	}
+// }
+
+
+// Ofertas para socios
+.mc-offert {
+	background-color: $color-primary-light;
+	.col-lg-4 {
+        background-color: white;
+		&:nth-child(even) {
+			background-color: $color-gray-bg;
+		}
+	}
+}
+.mc-offert__item {
+	padding: 30px 15px;
+	text-align: center;
+	img {
+		width: 150px;
+		height: 150px;
+		object-fit: contain;
+		margin: 0 auto 15px;
+		display: block;
+	}
+}

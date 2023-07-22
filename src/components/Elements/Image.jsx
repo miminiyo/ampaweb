@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react"
 
-const Image = () => {
+import Constants from "../../constants/Constants"
+
+const Image = (props) => {
 
     const [images, setImages] = useState([])
   
     const fetchUserData = () => {
-      fetch("http://localhost:8888/apiampa/wp-json/wp/v2/media/9")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/media/" + props.id)
         .then(response => {
           return response.json()
         })
@@ -19,7 +21,7 @@ const Image = () => {
     }, [])
 
     return (
-            <img src={"http://localhost:8888/apiampa/wp-content/uploads/" + images._wp_attached_file} alt={images.alt_text}></img>
+            <img src={images.x_featured_media_original} alt={images.alt_text}></img>
       );
 }
 
