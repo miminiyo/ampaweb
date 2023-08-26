@@ -45,6 +45,9 @@ const Offert = () => {
                                 ))}
                               </div>
                             )}
+                            <div className="mt-5 text-center">
+                              <a href="/">Ver todas</a>
+                            </div>
                     </div>
             </section>
 

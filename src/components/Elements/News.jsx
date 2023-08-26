@@ -36,14 +36,31 @@ const News = () => {
                               <div className="row">
                                 {users.map(user => (
                                   <div className="col-lg-4 col-12" key={user.id}>
-                                    <div className="mc-offert__item">
-                                      <Image id={user.featured_media}/>
-                                      <p><strong>{user.title.rendered}</strong></p>
-                                    </div>
+
+
+
+                                      <div class="work-thumb">
+                                          <div class="work-image-wrap">
+                                              <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" class="image-popup">
+                                                  <Image id={user.featured_media}/>
+                                              </a>
+                                          </div>
+                                          <div class="work-text-info">
+                                              {/* <small class="work-tag bg-white shadow-lg">Art Direction</small> */}
+                                              <h4 class="work-title">{user.title.rendered}</h4>
+                                          </div>
+                                      </div> 
                                   </div>
                                 ))}
                               </div>
                             )}
+
+
+
+
+
+
+
                     </div>
             </section>
 

@@ -48,6 +48,7 @@ header .navbar{
 header {
   position: sticky;
   top: 0;
+  z-index: 9;
 }
 
 /*---------------------------------------
@@ -431,6 +432,7 @@ button:focus:not(:focus-visible) {
 .work-thumb {
   position: relative;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
 .work-thumb-text {
@@ -443,23 +445,13 @@ button:focus:not(:focus-visible) {
 }
 
 .work-text-info {
-  background: var(--section-bg-color);
-  border-radius: .3rem;
-  border-bottom: 5px solid var(--border-color);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 20px;
-  width: 85%;
   margin: auto;
   margin-bottom: 20px;
+  margin-top: 20px;
   transition: filter 0.5s;
 }
 
-.work-thumb:hover .work-text-info {
-  filter: blur(2px);
-}
+
 
 .work-title {
   display: block;
