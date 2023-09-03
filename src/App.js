@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-
-import './App.css';
+import {Helmet} from "react-helmet";
+import Favicon from "react-favicon";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/bootstrap-icons.css'
@@ -8,15 +8,16 @@ import './assets/css/magnific-popup.css'
 import './assets/css/tooplate-tween-agency.css'
 import './assets/css/custom.scss'
 
-import './assets/js/jquery.min.js'
-import './assets/js/bootstrap.min'
-import './assets/js/popper.js'
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'popper.js/dist/popper.min.js';
+import './assets/js/custom.js'
 //import './assets/js/click-scroll.js'
 //import './assets/js/jquery.backstretch.min'
 // import './assets/js/jquery.magnific-popup.min.js'
 // import './assets/js/magnific-popup-options.js'
-import './assets/js/custom.js'
 
+import icoFav from '../src/assets/images/favicon/favicon-32x32.png'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer';
 
@@ -26,7 +27,13 @@ import Static from './components/Pages/Static/Static'
 const App = () => {
 
   return (
-    <div>
+    <div> 
+      <Favicon url={icoFav} />
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>AMPA IES Miguel Catalán</title>
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+      </Helmet>
       <Header/>
         <main>
           <Routes>

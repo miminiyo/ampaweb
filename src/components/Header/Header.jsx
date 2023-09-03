@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import logo from '../../assets/images/logo.webp'
+
 
 const Header = () => {
 
@@ -8,11 +10,11 @@ const Header = () => {
                 <div className="container">
 
                     <a href="index.html" className="navbar-brand">
-                        <i className="bi-layers"></i> Tween
+                        <img src={logo} alt="Logo AMPA IES Miguel Catalán"/>
                     </a>
 
                     <a href="/" className="custom-btn btn btn-lg d-lg-none ms-auto me-4">
-                        Download
+                        Descarga...
                         <i className="bi-download ms-2"></i>
                     </a>
 
@@ -35,7 +37,7 @@ const Header = () => {
 
                         <div className="ms-auto d-none d-lg-block">
                             <a href="/" className="custom-btn btn btn-lg">
-                                Download
+                                Descarga...
                                 <i className="bi-download ms-2"></i>
                             </a>
                         </div>

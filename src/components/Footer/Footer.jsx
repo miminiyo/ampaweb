@@ -47,11 +47,10 @@ const Footer = () => {
                 <div className="site-footer-bottom mt-5">
                     <div className="row pt-4">
                         <div className="col-lg-6 col-12">
-                            <p className="copyright-text tooplate-link">Copyright © 2022 Tween Agency Co., Ltd.
-                            Design: <a rel="nofollow" href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
+                            <p className="copyright-text tooplate-link">Copyright © 2023 :: AMPA IES Miguel Catalán</p>
                         </div>
 
-                        <div className="col-lg-3 col-12 ms-auto">
+                        {/* <div className="col-lg-3 col-12 ms-auto">
                             <ul className="social-icon">
                                 <li><a href="#" className="social-icon-link bi-facebook"></a></li>
 
@@ -63,7 +62,7 @@ const Footer = () => {
 
                                 <li><a href="#" className="social-icon-link bi-youtube"></a></li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

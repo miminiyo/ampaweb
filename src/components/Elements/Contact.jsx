@@ -10,35 +10,24 @@ const Contact = () => {
 
                         <form className="custom-form" role="form" action="" method="post">
                             <div className="row">
-                                <div className="col-lg-4 col-md-6 col-12 my-2">
-                                    <label className="mb-2" for="name">Full Name</label>
+                                <div className="col-lg-6 col-md-6 col-12 my-2">
+                                    <label className="mb-2" for="name">Nombre</label>
 
                                     <input type="text" name="name" id="name" className="form-control" required=""/>
                                 </div>
 
-                                <div className="col-lg-4 col-md-6 col-12 my-2">
-                                    <label className="mb-2" for="email">Email Address</label>
+                                <div className="col-lg-6 col-md-6 col-12 my-2">
+                                    <label className="mb-2" for="email">Email</label>
                                     
                                     <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" className="form-control" required=""/>
                                 </div>
 
-                                <div className="col-lg-4 col-md-6 col-12 my-2">
-                                    <label className="mb-2" for="subject">How did you know about us?</label>
-
-                                    <select className="form-select form-control" name="subject" id="subject">
-                                        <option selected="">Choose a subject</option>
-                                        <option value="web+search">Website Searches</option>
-                                        <option value="social+media">Social Media</option>
-                                        <option value="others">Others</option>
-                                    </select>
-                                </div>
-
                                 <div className="col-12 my-2">
-                                    <label className="mb-2" for="message">Tell us about the project</label>
+                                    <label className="mb-2" for="message">¿En qué podemos ayudarte?</label>
 
                                     <textarea className="form-control" rows="5" id="message" name="message"></textarea>
                                 
-                                    <button type="submit" className="form-control mt-4" id="submit">Submit</button>
+                                    <button type="submit" className="form-control mt-4" id="submit">Enviar</button>
                                 </div>
 
                             </div>

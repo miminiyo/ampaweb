@@ -54,7 +54,7 @@ const TabsSection = () => {
                                     <div className="col-lg-5 col-12 m-auto">
                                         <h3 className="mb-3">Fútbol Sala</h3>
 
-                                        <p>We want you to be happy with our Tween Agency services. Our digital agency is ready to serve you to grow your business in a healthy way.</p>
+                                        <p>Wee want you to be happy with our Tween Agency services. Our digital agency is ready to serve you to grow your business in a healthy way.</p>
 
                                         <p>This is Bootstrap 5 HTML template for your website provided by <a rel="nofollow" href="https://www.tooplate.com/" target="_blank">Tooplate</a>. You can download, edit and use this layout for your company website.</p>
                                         
