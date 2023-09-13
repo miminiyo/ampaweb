@@ -9,7 +9,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg">
                 <div className="container">
 
-                    <a href="index.html" className="navbar-brand">
+                    <a href="/" className="navbar-brand">
                         <img src={logo} alt="Logo AMPA IES Miguel Catalán"/>
                     </a>
 
@@ -30,6 +30,10 @@ const Header = () => {
 
                             <li className="nav-item">
                                 <Link to="ampa">AMPA</Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link to="ofertas">Ofertas</Link>
                             </li>
 
                             

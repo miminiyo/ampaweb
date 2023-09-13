@@ -17,12 +17,17 @@ import './assets/js/custom.js'
 // import './assets/js/jquery.magnific-popup.min.js'
 // import './assets/js/magnific-popup-options.js'
 
+import SmoothScroll from './components/Helpers/Smoothscroll';
+
 import icoFav from '../src/assets/images/favicon/favicon-32x32.png'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer';
 
+
+
 import Home from "./components/Pages/Home/Home"
 import Static from './components/Pages/Static/Static'
+import Offerts from './components/Pages/Offerts/Offerts';
 
 const App = () => {
 
@@ -36,10 +41,13 @@ const App = () => {
       </Helmet>
       <Header/>
         <main>
-          <Routes>
-            <Route path="/" element={ <Home /> } />
-            <Route path="ampa" element={ <Static /> } />
-          </Routes>
+          <SmoothScroll>
+            <Routes>
+              <Route path="/" element={ <Home /> } />
+              <Route path="ampa" element={ <Static /> } />
+              <Route path="Ofertas" element={ <Offerts /> } />
+            </Routes>
+          </SmoothScroll>
         </main>
       <Footer/>
     </div>

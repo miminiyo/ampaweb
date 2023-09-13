@@ -27,10 +27,8 @@ const Pricing = () => {
                             <div className="pricing-body">
 
                                 <ul className="pricing-list">
-                                    <li className="pricing-list-item">Fully Digital</li>
-                                    <li className="pricing-list-item">Social Media Managements</li>
-                                    <li className="pricing-list-item">Website Optimizations</li>
-                                    <li className="pricing-list-item">24/7 Phone Calls and Emails</li>
+                                    <li className="pricing-list-item">Beneficios cuotas actividades deportivas</li>
+                                    <li className="pricing-list-item">Ofertas para miembros en comercios asociados</li>
                                 </ul>
 
                                 <h5 className="mt-lg-5 mt-4 mb-3">Small to Mid-size Businesses</h5>

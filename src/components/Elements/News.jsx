@@ -25,7 +25,6 @@ const News = () => {
 
     return(
             
-
           <section className="mc-news section-padding" id="section_3">
                 <div className="container">
                     
@@ -39,15 +38,15 @@ const News = () => {
 
 
 
-                                      <div class="work-thumb">
-                                          <div class="work-image-wrap">
-                                              <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" class="image-popup">
+                                      <div className="work-thumb">
+                                          <div className="work-image-wrap">
+                                              <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" className="image-popup">
                                                   <Image id={user.featured_media}/>
                                               </a>
                                           </div>
-                                          <div class="work-text-info">
-                                              {/* <small class="work-tag bg-white shadow-lg">Art Direction</small> */}
-                                              <h4 class="work-title">{user.title.rendered}</h4>
+                                          <div className="work-text-info">
+                                              {/* <small className="work-tag bg-white shadow-lg">Art Direction</small> */}
+                                              <h4 className="work-title">{user.title.rendered}</h4>
                                           </div>
                                       </div> 
                                   </div>
@@ -62,9 +61,8 @@ const News = () => {
 
 
                     </div>
-            </section>
+          </section>
 
-        
 
     )
 

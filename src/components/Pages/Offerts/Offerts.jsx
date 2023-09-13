@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 
-import Constants from "../../constants/Constants"
+import Constants from "../../../constants/Constants"
 
-import Image from "./Image"
+import Image from "../../Elements/Image"
 
-const Offert = () => {
+const Offerts = () => {
 
     const [users, setUsers] = useState([])
 
@@ -46,16 +45,12 @@ const Offert = () => {
                                 ))}
                               </div>
                             )}
-                            <div className="mt-5 text-center">
-                              <Link to="ofertas">Ver todas</Link>
-                            </div>
                     </div>
             </section>
 
         
 
     )
-
 }
 
-export default Offert
+export default Offerts
