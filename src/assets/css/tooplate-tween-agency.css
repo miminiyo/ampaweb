@@ -26,7 +26,7 @@ https://www.tooplate.com/view/2128-tween-agency
   --h1-font-size:                 48px;
   --h2-font-size:                 42px;
   --h3-font-size:                 36px;
-  --h4-font-size:                 32px;
+  --h4-font-size:                 24px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
   --p-font-size:                  18px;
@@ -130,8 +130,8 @@ a:hover {
 }
 
 .section-padding {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 b,
@@ -460,10 +460,11 @@ button:focus:not(:focus-visible) {
 }
 
 .work-image {
-  border-radius: .3rem;
+  border-radius: 0;
   transition: all 0.5s;
-  height: 200px;
-    object-fit: cover;
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .work-tag {
@@ -527,7 +528,7 @@ button:focus:not(:focus-visible) {
   PRICING PLANS               
 -----------------------------------------*/
 .pricing {
-  background-image: url('../images/maria-stewart-p4tj0g-_aMM-unsplash.jpg');
+  /* background-image: url('../images/maria-stewart-p4tj0g-_aMM-unsplash.jpg'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -723,10 +724,7 @@ button:focus:not(:focus-visible) {
     font-size: 18px;
   }
 	
-  .section-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+
 
   .custom-btn {
     font-size: var(--copyright-text-font-size);

@@ -1,7 +1,13 @@
+import heroimage from '../../assets/images/hall.jpg'
+
+var divStyle = {
+    backgroundImage: 'url(' + heroimage + ')',
+  };
+
 const Pricing = () => {
 
     return(
-        <section className="pricing section-padding" id="section_5">
+        <section className="pricing section-padding" id="section_5" style={divStyle}>
             <div className="container">
                 <div className="row">
 

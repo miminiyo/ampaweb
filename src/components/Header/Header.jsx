@@ -39,12 +39,12 @@ const Header = () => {
                             
                         </ul>
 
-                        <div className="ms-auto d-none d-lg-block">
+                        {/* <div className="ms-auto d-none d-lg-block">
                             <a href="/" className="custom-btn btn btn-lg">
                                 Descarga...
                                 <i className="bi-download ms-2"></i>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </nav>

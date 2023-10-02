@@ -15,9 +15,9 @@ const Home = () => {
             <TabsSection/>
             <Offert/>
             <News/>
-            <Kpi/>
+            
             <Pricing/>
-            <Contact/>
+            
         </div>
     )
 

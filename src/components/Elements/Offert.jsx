@@ -11,7 +11,7 @@ const Offert = () => {
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas?per_page=6")
         .then(response => {
           return response.json()
         })
@@ -40,7 +40,7 @@ const Offert = () => {
                                     <div className="mc-offert__item">
                                       <Image id={user.featured_media}/>
                                       <p><strong>{user.title.rendered}</strong></p>
-                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={"http://localhost:8888/apiampa/" + user.x_metadata.PDF}>Ver Oferta</a>
+                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={Constants.urlDom + user.x_metadata.PDF}>Ver Oferta</a>
                                     </div>
                                   </div>
                                 ))}

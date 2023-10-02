@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react"
 
-import Constants from "../../../constants/Constants"
+import Constants from "../../constants/Constants"
 
-import Image from "../../Elements/Image"
+import Image from "./Image"
 
-const Offerts = () => {
+const Offert = () => {
 
     const [users, setUsers] = useState([])
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/junta")
         .then(response => {
           return response.json()
         })
@@ -45,12 +45,14 @@ const Offerts = () => {
                                 ))}
                               </div>
                             )}
+                            
                     </div>
             </section>
 
         
 
     )
+
 }
 
-export default Offerts
+export default Offert

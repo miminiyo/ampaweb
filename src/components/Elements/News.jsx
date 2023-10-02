@@ -34,7 +34,7 @@ const News = () => {
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
-                                  <div className="col-lg-4 col-12" key={user.id}>
+                                  <div className="col-lg-3 col-6" key={user.id}>
 
 
 
@@ -46,7 +46,8 @@ const News = () => {
                                           </div>
                                           <div className="work-text-info">
                                               {/* <small className="work-tag bg-white shadow-lg">Art Direction</small> */}
-                                              <h4 className="work-title">{user.title.rendered}</h4>
+                                              <h4 className="work-title mb-3">{user.title.rendered}</h4>
+                                              <a href="/"> Ver más</a>
                                           </div>
                                       </div> 
                                   </div>

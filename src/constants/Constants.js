@@ -1,4 +1,4 @@
 
 export default{
-    urlDom: 'http://localhost:8888/apiampa',
+    urlDom: 'http://datos.ampamiguelcatalan.com',
 }

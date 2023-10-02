@@ -8,7 +8,7 @@ const Static = () => {
 
     const [text, setText] = useState([])
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/posts/1")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/posts/6")
         .then(response => {
           return response.json()
         })
