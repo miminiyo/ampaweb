@@ -1,4 +1,5 @@
 //variables
+$color-primary:#70a0e7;
 $color-primary-light: #e5fcff;
 $color-gray-bg: #eeeeee;
 
@@ -27,28 +28,87 @@ $color-gray-bg: #eeeeee;
 		z-index: 1;
 		object-fit: cover;
 	}
+	.swiper-slide{
+		.container{
+			display: grid;
+			align-items: center;
+		}
+	}
+	.heroText{
+		h1{
+			text-align: center;
+			color: white;
+			font-size: 70px;
+		}
+	}
+}
+.swiper-button-prev, .swiper-button-next{
+color: white!important;
 }
 
 
 // Ofertas para socios
 .mc-offert {
 	background-color: $color-primary-light;
+	@media screen and (max-width:767px) {
+		padding: 30px 15px;
+	}
+	
 	.col-lg-4 {
         background-color: white;
 		&:nth-child(even) {
 			background-color: $color-gray-bg;
 		}
 	}
+	h2{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&__item {
+		padding: 30px 15px;
+		text-align: center;
+		img {
+			width: 150px;
+			height: 100px;
+			object-fit: contain;
+			margin: 0 auto 15px;
+			display: block;
+		}
+	}
+	&__name{
+		margin-bottom: 5px;
+	}
+	&__location{
+		font-size: 14px;
+	}
 }
-.mc-offert__item {
-	padding: 30px 15px;
-	text-align: center;
-	img {
-		width: 150px;
-		height: 100px;
-		object-fit: contain;
-		margin: 0 auto 15px;
-		display: block;
+
+// Junta
+.mc-junta{
+	h2{
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	&__item{
+		text-align: center;
+		margin-bottom: 2rem;
+		img{
+			width: 150px;
+			height: 150px;
+			background-size: cover;
+			border-radius: 50%;
+			margin-bottom: 1.5rem;
+		}
+		a{
+			color: $color-primary;
+		}
+	}
+	&__name{
+		margin-bottom: 5px;
+	}
+	&__location{
+		font-size: 14px;
+		margin-bottom: 5px;
 	}
 }
 

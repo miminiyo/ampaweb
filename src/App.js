@@ -28,6 +28,7 @@ import Footer from './components/Footer/Footer';
 import Home from "./components/Pages/Home/Home"
 import Static from './components/Pages/Static/Static'
 import Offerts from './components/Pages/Offerts/Offerts';
+import Junta from './components/Pages/Junta/Junta';
 
 const App = () => {
 
@@ -46,6 +47,7 @@ const App = () => {
               <Route path="/" element={ <Home /> } />
               <Route path="ampa" element={ <Static /> } />
               <Route path="Ofertas" element={ <Offerts /> } />
+              <Route path="Junta" element={ <Junta /> } />
             </Routes>
           </SmoothScroll>
         </main>

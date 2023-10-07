@@ -1,4 +1,4 @@
-import heroimage from '../../assets/images/hall.jpg'
+import heroimage from '../../assets/images/bh1.webp'
 
 var divStyle = {
     backgroundImage: 'url(' + heroimage + ')',

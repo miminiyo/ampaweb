@@ -1,8 +1,27 @@
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import logo from '../../assets/images/logo.webp'
 
+import Constants from "../../constants/Constants"
 
 const Header = () => {
+
+    const [text, setText] = useState([])
+    const fetchUserData = () => {
+      fetch(Constants.urlDom + "/wp-json/wp/v2/posts/66")
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          setText(data)
+        })
+    }
+  
+    useEffect(() => {
+      fetchUserData()
+    }, [])
+
+    //const estatutos = text.x_metadata.PDF
 
     return(
         <header>
@@ -29,17 +48,25 @@ const Header = () => {
                             </li>
 
                             <li className="nav-item">
-                                <Link to="ampa">AMPA</Link>
+                                <a href={Constants.urlDom + "/wp-content/uploads/2023/10/estatutos_ampa_MCatalan.pdf"} target="_blank" rel="noreferrer">Estatutos</a>
                             </li>
 
                             <li className="nav-item">
                                 <Link to="ofertas">Ofertas</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="junta">Junta</Link>
+                            </li>
 
                             
                         </ul>
 
-                        {/* <div className="ms-auto d-none d-lg-block">
+                        <div className="ms-auto d-none d-lg-block">
+                            <a href="https://iesmcatalan.com/" className="custom-btn btn btn-lg" target="_blank" rel="noreferrer">
+                                IES Miguel Catalán
+                            </a>
+                        </div>
+                         {/* <div className="ms-auto d-none d-lg-block">
                             <a href="/" className="custom-btn btn btn-lg">
                                 Descarga...
                                 <i className="bi-download ms-2"></i>

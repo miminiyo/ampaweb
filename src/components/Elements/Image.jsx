@@ -21,7 +21,7 @@ const Image = (props) => {
     }, [])
 
     return (
-            <img src={images.x_featured_media_original} alt={images.alt_text}  class="img-fluid work-image"></img>
+            <img src={images.x_featured_media_original} alt={images.alt_text}  className="img-fluid work-image"></img>
       );
 }
 

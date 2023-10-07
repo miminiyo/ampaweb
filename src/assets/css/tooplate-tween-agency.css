@@ -129,6 +129,11 @@ a:hover {
   color: var(--white-color);
 }
 
+.page-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .section-padding {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -188,7 +193,8 @@ strong {
   color: var(--white-color);
   font-size: var(--copyright-text-font-size);
   font-weight: var(--font-weight-bold);
-  padding: 12px 24px;
+  padding: 6px 18px;
+  border-radius: 0;
 }
 
 .custom-bg-dark {
@@ -258,10 +264,11 @@ button:focus:not(:focus-visible) {
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
-.hero {
+.hero .swiper-slide{
   padding-top: 120px;
   padding-bottom: 60px;
   position: relative;
+  display: flex;
 }
 
 .heroText {
@@ -270,9 +277,9 @@ button:focus:not(:focus-visible) {
 }
 
 @media screen and (min-width: 991px) {
-  .hero {
+  .hero .swiper-slide{
     height: 75vh;
-	min-height: 600px;
+	  min-height: 600px;
   }
 }
 
@@ -287,7 +294,7 @@ button:focus:not(:focus-visible) {
 }
 
 .overlay.dark-overlay {
-  background: rgba(0,0,0, 0.75);
+  background: rgba(0,0,0, 0.4);
 }
 
 .nav-tabs .nav-link {
@@ -724,12 +731,6 @@ button:focus:not(:focus-visible) {
     font-size: 18px;
   }
 	
-
-
-  .custom-btn {
-    font-size: var(--copyright-text-font-size);
-    padding: 6px 12px;
-  }
 
   .navbar {
     background: var(--white-color);

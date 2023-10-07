@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react"
 
 import Constants from "../../../constants/Constants"
 
-import Image from "../../Elements/Image"
 
-const Offerts = () => {
+const Junta = () => {
 
     const [users, setUsers] = useState([])
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/miembros")
         .then(response => {
           return response.json()
         })
@@ -18,6 +17,8 @@ const Offerts = () => {
           setUsers(data)
         })
     }
+
+    console.log(fetchUserData)
   
     useEffect(() => {
       fetchUserData()
@@ -26,21 +27,21 @@ const Offerts = () => {
     return(
             
 
-          <section className="mc-offert page-padding" id="section_3">
+          <section className="mc-junta page-padding" id="section_3">
                 <div className="container">
                     
 
-                        <h2>Ofertas para miembros del AMPA</h2>
+                        <h2>Miembros de la Junta</h2>
                             
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
-                                  <div className="col-lg-4 col-12" key={user.id}>
-                                    <div className="mc-offert__item">
-                                      <Image id={user.featured_media}/>
-                                      <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>
-                                      <p className="mc-offert__location">{user.x_metadata.ubicacion}</p>
-                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={Constants.urlDom + user.x_metadata.PDF} rel="noreferrer">Ver Oferta</a>
+                                  <div className="col-md-6 col-lg-4 col-xl-3 col-12" key={user.id}>
+                                    <div className="mc-junta__item">
+                                      <img src={user.x_featured_media_medium}/>
+                                      <p className="mc-junta__name"><strong>{user.title.rendered}</strong></p>
+                                      <p className="mc-junta__location">{user.x_metadata.cargo}</p>
+                                      <a className="" target="_blank" href={"mailto:" + Constants.urlDom + user.x_metadata.email} rel="noreferrer">{user.x_metadata.email}</a>
                                     </div>
                                   </div>
                                 ))}
@@ -54,4 +55,4 @@ const Offerts = () => {
     )
 }
 
-export default Offerts
+export default Junta

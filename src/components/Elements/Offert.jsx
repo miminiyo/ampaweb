@@ -11,7 +11,7 @@ const Offert = () => {
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas?per_page=6")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas?per_page=6&order_by=rand")
         .then(response => {
           return response.json()
         })
@@ -38,9 +38,11 @@ const Offert = () => {
                                 {users.map(user => (
                                   <div className="col-lg-4 col-12" key={user.id}>
                                     <div className="mc-offert__item">
-                                      <Image id={user.featured_media}/>
-                                      <p><strong>{user.title.rendered}</strong></p>
-                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={Constants.urlDom + user.x_metadata.PDF}>Ver Oferta</a>
+                                      {/* <Image id={user.featured_media}/> */}
+                                      <img src={user.x_featured_media_medium}/>
+                                      <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>
+                                      <p className="mc-offert__location">{user.x_metadata.ubicacion}</p>
+                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={Constants.urlDom + user.x_metadata.PDF} rel="noreferrer">Ver Oferta</a>
                                     </div>
                                   </div>
                                 ))}
