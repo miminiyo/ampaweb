@@ -44,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.7",
+    "@types/jquery": "^3.5.22"
   }
 }

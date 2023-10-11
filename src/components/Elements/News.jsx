@@ -34,7 +34,7 @@ const News = () => {
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
-                                  <div className="col-lg-3 col-6" key={user.id}>
+                                  <div className="col-lg-3 col-md-6 col-12" key={user.id}>
 
 
 

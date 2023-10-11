@@ -3,10 +3,13 @@
   
   "use strict";
 
+
     // NAVBAR
-    // $('.navbar-nav .nav-link').click(function(){
-    //     $(".navbar-collapse").collapse('hide');
-    // });
+    // if($(window).height()<767){      
+    //   $('.navbar-nav .nav-item a').click(function(){
+    //       $(".navbar-collapse").collapse('hide');
+    //   });
+    // }
 
     // $(window).scroll(function() {    
     //     var scroll = $(window).scrollTop();
