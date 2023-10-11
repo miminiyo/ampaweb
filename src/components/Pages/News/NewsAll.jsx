@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 
-import Constants from "../../constants/Constants"
+import Constants from "../../../constants/Constants"
 
-import Image from "./Image"
+import Image from "../../Elements/Image"
 
-const News = () => {
+const Newsall = () => {
 
     const [users, setUsers] = useState([])
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias?per_page=4")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias")
         .then(response => {
           return response.json()
         })
@@ -26,22 +25,22 @@ const News = () => {
 
     return(
             
-          <section className="mc-news section-padding" id="section_3">
+          <section className="mc-news page-padding" id="section_3">
                 <div className="container">
                     
 
-                        <h2 className="mb-5 text-center">Noticias</h2>
+                        <h2>Noticias</h2>
                             
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
-                                  <div className="col-lg-3 col-md-6 col-12" key={user.id}>
+                                  <div className="col-lg-3 col-md-6 col-12" data-id={user.id} key={user.id}>
 
 
 
                                       <div className="work-thumb">
                                           <div className="work-image-wrap">
-                                              <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" className="image-popup">
+                                              <a href="/detalle" className="image-popup">
                                                   <Image id={user.featured_media}/>
                                               </a>
                                           </div>
@@ -56,9 +55,7 @@ const News = () => {
                               </div>
                             )}
 
-                            <div className="mt-5 text-center">
-                              <Link to="noticias">Ver todas</Link>
-                            </div>
+
 
 
 
@@ -72,4 +69,4 @@ const News = () => {
 
 }
 
-export default News
+export default Newsall

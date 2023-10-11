@@ -11,7 +11,7 @@ import './assets/css/custom.scss'
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'popper.js/dist/popper.min.js';
-import './assets/js/custom.js'
+//import './assets/js/custom.js'
 //import './assets/js/click-scroll.js'
 //import './assets/js/jquery.backstretch.min'
 // import './assets/js/jquery.magnific-popup.min.js'
@@ -29,8 +29,12 @@ import Home from "./components/Pages/Home/Home"
 import Static from './components/Pages/Static/Static'
 import Offerts from './components/Pages/Offerts/Offerts';
 import Junta from './components/Pages/Junta/Junta';
+import Newsall from './components/Pages/News/NewsAll';
+import Newsdetail from './components/Pages/Newsdetail/Newsdetail';
 
 const App = () => {
+
+  
 
   return (
     <div> 
@@ -48,6 +52,8 @@ const App = () => {
               <Route path="ampa" element={ <Static /> } />
               <Route path="Ofertas" element={ <Offerts /> } />
               <Route path="Junta" element={ <Junta /> } />
+              <Route path="Noticias" element={ <Newsall /> } />
+              <Route path="Detalle" element={ <Newsdetail /> } />
             </Routes>
           </SmoothScroll>
         </main>

@@ -18,11 +18,13 @@ const Junta = () => {
         })
     }
 
-    console.log(fetchUserData)
   
     useEffect(() => {
       fetchUserData()
     }, [])
+
+    const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+    const newUsersList = shuffle(users);
 
     return(
             
@@ -33,9 +35,9 @@ const Junta = () => {
 
                         <h2>Miembros de la Junta</h2>
                             
-                            {users.length > 0 && (
+                            {newUsersList.length > 0 && (
                               <div className="row">
-                                {users.map(user => (
+                                {newUsersList.map(user => (
                                   <div className="col-md-6 col-lg-4 col-xl-3 col-12" key={user.id}>
                                     <div className="mc-junta__item">
                                       <img src={user.x_featured_media_medium}/>

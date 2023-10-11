@@ -23,6 +23,9 @@ const Offerts = () => {
       fetchUserData()
     }, [])
 
+    const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+    const newUsersList = shuffle(users);
+
     return(
             
 
@@ -32,9 +35,9 @@ const Offerts = () => {
 
                         <h2>Ofertas para miembros del AMPA</h2>
                             
-                            {users.length > 0 && (
+                            {newUsersList.length > 0 && (
                               <div className="row">
-                                {users.map(user => (
+                                {newUsersList.map(user => (
                                   <div className="col-lg-4 col-12" key={user.id}>
                                     <div className="mc-offert__item">
                                       <Image id={user.featured_media}/>

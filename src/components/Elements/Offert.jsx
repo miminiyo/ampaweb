@@ -9,9 +9,9 @@ const Offert = () => {
 
     const [users, setUsers] = useState([])
 
-  
+    // consulta ventajas
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas?per_page=6&order_by=rand")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/ventajas")
         .then(response => {
           return response.json()
         })
@@ -24,6 +24,10 @@ const Offert = () => {
       fetchUserData()
     }, [])
 
+    // carga random resultados
+    const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+    const newUsersList = shuffle(users);
+
     return(
             
 
@@ -33,12 +37,12 @@ const Offert = () => {
 
                         <h2 className="mb-5 text-center">Ofertas para miembros del AMPA</h2>
                             
-                            {users.length > 0 && (
+                            {newUsersList.length > 0 && (
                               <div className="row">
-                                {users.map(user => (
+                                {/* slice limita resultados a 6 */}
+                                {newUsersList.slice(0,6).map(user => (
                                   <div className="col-lg-4 col-12" key={user.id}>
                                     <div className="mc-offert__item">
-                                      {/* <Image id={user.featured_media}/> */}
                                       <img src={user.x_featured_media_medium}/>
                                       <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>
                                       <p className="mc-offert__location">{user.x_metadata.ubicacion}</p>

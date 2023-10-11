@@ -3,10 +3,8 @@
   
   "use strict";
 
-    // NAVBAR
-    // $('.navbar-nav .nav-link').click(function(){
-    //     $(".navbar-collapse").collapse('hide');
-    // });
+
+    
 
     // $(window).scroll(function() {    
     //     var scroll = $(window).scrollTop();
