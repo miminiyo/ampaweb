@@ -8,7 +8,7 @@ import './assets/css/magnific-popup.css'
 import './assets/css/tooplate-tween-agency.css'
 import './assets/css/custom.scss'
 
-import 'jquery/dist/jquery.min.js'
+import 'jquery/dist/jquery.js'
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'popper.js/dist/popper.min.js';
 //import './assets/js/custom.js'
