@@ -41,7 +41,7 @@ const News = () => {
 
                                       <div className="work-thumb">
                                           <div className="work-image-wrap">
-                                              <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" className="image-popup">
+                                          <a href={"/detalle/" + user.id} className="image-popup">
                                                   <Image id={user.featured_media}/>
                                               </a>
                                           </div>

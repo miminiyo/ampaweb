@@ -16,7 +16,6 @@ function collapseMenu(e) {
         $('.navbar-nav .nav-item a').on('click', function(){
             $(".navbar-collapse").removeClass('show');
             $(".navbar-toggler").removeClass('collapsed').attr('aria-expanded', false);
-            console.log('09000')
         });
     }
   }

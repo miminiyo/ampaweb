@@ -28,24 +28,18 @@ const Newsall = () => {
           <section className="mc-news page-padding" id="section_3">
                 <div className="container">
                     
-
                         <h2>Noticias</h2>
-                            
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
                                   <div className="col-lg-3 col-md-6 col-12" data-id={user.id} key={user.id}>
-
-
-
                                       <div className="work-thumb">
                                           <div className="work-image-wrap">
-                                              <a href="/detalle" className="image-popup">
+                                              <a href={"/detalle/" + user.id} className="image-popup">
                                                   <Image id={user.featured_media}/>
                                               </a>
                                           </div>
                                           <div className="work-text-info">
-                                              {/* <small className="work-tag bg-white shadow-lg">Art Direction</small> */}
                                               <h4 className="work-title mb-3">{user.title.rendered}</h4>
                                               <a href="/"> Ver más</a>
                                           </div>
@@ -54,19 +48,9 @@ const Newsall = () => {
                                 ))}
                               </div>
                             )}
-
-
-
-
-
-
-
                     </div>
           </section>
-
-
     )
-
 }
 
 export default Newsall
