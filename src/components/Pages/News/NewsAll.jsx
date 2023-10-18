@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 import Constants from "../../../constants/Constants"
 
@@ -35,9 +36,10 @@ const Newsall = () => {
                                   <div className="col-lg-3 col-md-6 col-12" data-id={user.id} key={user.id}>
                                       <div className="work-thumb">
                                           <div className="work-image-wrap">
-                                              <a href={"/detalle/" + user.id} className="image-popup">
+                                            <Link to={"/detalle/" + user.id} className="image-popup">
                                                   <Image id={user.featured_media}/>
-                                              </a>
+                                            </Link>
+                                             
                                           </div>
                                           <div className="work-text-info">
                                               <h4 className="work-title mb-3">{user.title.rendered}</h4>

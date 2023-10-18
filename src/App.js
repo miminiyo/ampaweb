@@ -24,7 +24,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer';
 
 
-
+import Breadcrumb from './components/Elements/Breadcrumb';
 import Home from "./components/Pages/Home/Home"
 import Static from './components/Pages/Static/Static'
 import Offerts from './components/Pages/Offerts/Offerts';
@@ -45,6 +45,7 @@ const App = () => {
           {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <Header/>
+      <Breadcrumb/>
         <main>
           <SmoothScroll>
             <Routes>
@@ -53,7 +54,7 @@ const App = () => {
               <Route path="Ofertas" element={ <Offerts /> } />
               <Route path="Junta" element={ <Junta /> } />
               <Route path="Noticias" element={ <Newsall /> } />
-              <Route path="Detalle" element={ <Newsdetail /> } />
+              <Route path="detalle/:id" element={ <Newsdetail /> } />
             </Routes>
           </SmoothScroll>
         </main>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
 import Constants from "../../../constants/Constants"
 
@@ -8,9 +9,11 @@ const Newsdetail = () => {
 
     const [users, setUsers] = useState([])
 
+    const params = useParams()
+
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias/61")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias/" + params.id)
         .then(response => {
           return response.json()
         })
@@ -23,7 +26,6 @@ const Newsdetail = () => {
       fetchUserData()
     }, [])
 
-    console.log(users.title?.rendered)
 
 
     return(

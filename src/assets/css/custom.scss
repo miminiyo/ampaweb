@@ -15,6 +15,22 @@ $color-gray-bg: #eeeeee;
 // 		background-color: white;
 // 	}
 // }
+
+.breadcrumb{
+	display: inline-flex;
+	padding: 10px 15px 0 0;
+	border-bottom: 2px solid $color-primary;
+	margin-top: 10px;
+	li{
+		padding-right: 5px;
+	}
+	&__link{
+		text-transform:capitalize;
+		a{
+			text-transform:capitalize;
+		}
+	}
+}
 .navbar-collapse.collapse .navbar-container{
 	
 }
