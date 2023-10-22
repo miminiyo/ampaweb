@@ -2,6 +2,10 @@ import { Routes, Route } from 'react-router-dom'
 import {Helmet} from "react-helmet";
 import Favicon from "react-favicon";
 
+
+import CookieConsent from "react-cookie-consent";
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/bootstrap-icons.css'
 import './assets/css/magnific-popup.css'
@@ -38,6 +42,16 @@ const App = () => {
 
   return (
     <div> 
+      <CookieConsent
+        enableDeclineButton
+        location="bottom"
+        buttonText="Aceptar"
+        cookieName="myAwesomeCookieName2"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "14px" }}
+        expires={150}>
+        This website uses cookies to enhance the user experience.{" "}
+      </CookieConsent>
       <Favicon url={icoFav} />
       <Helmet>
           <meta charSet="utf-8" />
