@@ -6,6 +6,7 @@ import Favicon from "react-favicon";
 import CookieConsent from "react-cookie-consent";
 
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/bootstrap-icons.css'
 import './assets/css/magnific-popup.css'
@@ -36,9 +37,9 @@ import Junta from './components/Pages/Junta/Junta';
 import Newsall from './components/Pages/News/NewsAll';
 import Newsdetail from './components/Pages/Newsdetail/Newsdetail';
 
-const App = () => {
 
-  
+
+const App = () => {
 
   return (
     <div> 
@@ -59,7 +60,7 @@ const App = () => {
           {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <Header/>
-      <Breadcrumb/>
+      {/* <Breadcrumb/> */}
         <main>
           <SmoothScroll>
             <Routes>

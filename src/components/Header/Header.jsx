@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
+import { NavLink } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
+
 import $ from 'jquery';
 
 import logo from '../../assets/images/logo.webp'
@@ -9,15 +12,41 @@ import Constants from "../../constants/Constants"
 
 
 // NAVBAR
-console.log('333')
 
-function collapseMenu(e) {
-    if($(window).width()<991){   
-        $('.navbar-nav .nav-item a').on('click', function(){
-            $(".navbar-collapse").removeClass('show');
-            $(".navbar-toggler").removeClass('collapsed').attr('aria-expanded', false);
-        });
+const handleSubmit = (event) => {
+    //event.prevenDefault()
+    if(window.innerWidth<991){   
+        $(".navbar-collapse").removeClass('show');
+        $(".navbar-toggler").removeClass('collapsed').attr('aria-expanded', false);
     }
+  }
+
+  const PillsExample = () => {
+    return (
+      <Nav variant="pills">
+        <Nav.Item>
+          <Nav.Link as={NavLink} end to="/" eventKey="/">
+            Inicio
+          </Nav.Link>
+        </Nav.Item>
+        <div className="nav-item"><a href={Constants.urlDom + "/wp-content/uploads/2023/10/estatutos_ampa_MCatalan.pdf"} target="_blank" rel="noreferrer" onClick={handleSubmit} className="nav-link">Estatutos</a></div>
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="ofertas" eventKey="/ofertas" onClick={(event) => handleSubmit(event)}>
+            Ofertas
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="/junta" eventKey="/junta" onClick={(event) => handleSubmit(event)}>
+            Junta
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="/noticias" eventKey="/noticias" onClick={(event) => handleSubmit(event)}>
+            Noticias
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+    );
   }
 
 
@@ -57,9 +86,12 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
+
+
                     <div className="collapse navbar-collapse" id="navbarNav">
+
                         <div className="navbar-container">
-                            <ul className="navbar-nav ms-lg-5">
+                            {/* <ul className="navbar-nav ms-lg-5">
                                 <li className="nav-item">
                                     <Link to="/" onClick={collapseMenu}>Inicio</Link>
                                 </li>
@@ -79,8 +111,8 @@ const Header = () => {
                                 </li>
 
                                 
-                            </ul>
-
+                            </ul> */}
+                            <PillsExample/>
                             <a href="https://iesmcatalan.com/" className="custom-btn btn btn-lg" target="_blank" rel="noreferrer">
                                 IES Miguel Catalán
                             </a>
