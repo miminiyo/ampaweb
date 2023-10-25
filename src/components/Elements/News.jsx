@@ -36,28 +36,30 @@ const News = () => {
                               <div className="row">
                                 {users.map(user => (
                                   <div className="col-lg-3 col-md-6 col-12" key={user.id}>
-
-
-
                                       <div className="work-thumb">
-                                          <div className="work-image-wrap">
-                                          <a href={"/detalle/" + user.id} className="image-popup">
-                                                  <Image id={user.featured_media}/>
-                                              </a>
-                                          </div>
-                                          <div className="work-text-info">
-                                              {/* <small className="work-tag bg-white shadow-lg">Art Direction</small> */}
+                                        <div className="work-image-wrap">
+                                          <Link to={"/detalle/" + user.id} className="image-popup">
+                                                <Image id={user.featured_media}/>
+                                          </Link>
+                                          <p className="work-date">{user.x_date}</p>
+                                        </div>
+                                        <div className="work-text-info">
+                                            <Link to={"/detalle/" + user.id} className="image-popup">
                                               <h4 className="work-title mb-3">{user.title.rendered}</h4>
-                                              <a href="/"> Ver más</a>
-                                          </div>
+                                            </Link>
+
+                                            <Link to={"/detalle/" + user.id} className="custom-btn">
+                                              Ver más
+                                            </Link>
+                                        </div>
                                       </div> 
                                   </div>
                                 ))}
                               </div>
                             )}
 
-                            <div className="mt-5 text-center">
-                              <Link to="noticias">Ver todas</Link>
+                            <div className="text-center">
+                              <Link to="noticias" className="link">Ver todas</Link>
                             </div>
 
 

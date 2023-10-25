@@ -41,7 +41,7 @@ const handleSubmit = (event) => {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={NavLink} to="/noticias" eventKey="/noticias" onClick={(event) => handleSubmit(event)}>
+          <Nav.Link as={NavLink} to="/noticias" eventKey="/noticias" onClick={(event) => handleSubmit(event)} className="nav-link-new">
             Noticias
           </Nav.Link>
         </Nav.Item>
@@ -80,6 +80,10 @@ const Header = () => {
 
                     <a href="/" className="navbar-brand">
                         <img src={logo} alt="Logo AMPA IES Miguel Catalán"/>
+                        <span>
+                          <strong>AMPA</strong>
+                           IES Miguel Catalán
+                        </span>
                     </a>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

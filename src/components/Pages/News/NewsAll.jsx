@@ -39,11 +39,16 @@ const Newsall = () => {
                                             <Link to={"/detalle/" + user.id} className="image-popup">
                                                   <Image id={user.featured_media}/>
                                             </Link>
-                                             
+                                            <p className="work-date">{user.x_date}</p>
                                           </div>
                                           <div className="work-text-info">
-                                              <h4 className="work-title mb-3">{user.title.rendered}</h4>
-                                              <a href="/"> Ver más</a>
+                                              <Link to={"/detalle/" + user.id} className="image-popup">
+                                                <h4 className="work-title mb-3">{user.title.rendered}</h4>
+                                              </Link>
+
+                                              <Link to={"/detalle/" + user.id} className="custom-btn">
+                                                Ver más
+                                              </Link>
                                           </div>
                                       </div> 
                                   </div>

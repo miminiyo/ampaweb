@@ -53,7 +53,7 @@ const Offert = () => {
                               </div>
                             )}
                             <div className="mt-5 text-center">
-                              <Link to="ofertas">Ver todas</Link>
+                              <Link to="ofertas" className="link">Ver todas</Link>
                             </div>
                     </div>
             </section>
