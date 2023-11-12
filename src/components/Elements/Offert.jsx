@@ -31,7 +31,7 @@ const Offert = () => {
     return(
             
 
-          <section className="mc-offert section-padding" id="section_3">
+          <section className="mc-offert mc-offert--bg section-padding" id="section_3">
                 <div className="container">
                     
 
@@ -41,7 +41,7 @@ const Offert = () => {
                               <div className="row">
                                 {/* slice limita resultados a 6 */}
                                 {newUsersList.slice(0,6).map(user => (
-                                  <div className="col-lg-4 col-12" key={user.id}>
+                                  <div className="col-lg-4 col-md-6 col-12" key={user.id}>
                                     <div className="mc-offert__item">
                                       <img src={user.x_featured_media_medium}/>
                                       <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>

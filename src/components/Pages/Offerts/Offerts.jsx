@@ -38,7 +38,7 @@ const Offerts = () => {
                             {newUsersList.length > 0 && (
                               <div className="row">
                                 {newUsersList.map(user => (
-                                  <div className="col-lg-4 col-12" key={user.id}>
+                                  <div className="col-lg-4 col-md-6 col-12" key={user.id}>
                                     <div className="mc-offert__item">
                                       <Image id={user.featured_media}/>
                                       <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>

@@ -34,13 +34,17 @@ const TabsSection = () => {
                                     </div>
 
                                     <div className="col-lg-5 col-12 m-auto">
-                                        <h3 className="mb-3">Voleibol</h3>
 
-                                        <p>We want you to be happy with our Tween Agency services. Our digital agency is ready to serve you to grow your business in a healthy way.</p>
-
-                                        <p>This is Bootstrap 5 HTML template for your website provided by <a rel="nofollow" href="https://www.tooplate.com/" target="_blank">Tooplate</a>. You can download, edit and use this layout for your company website.</p>
-                                        
-                                        <p>Image credits go to <a rel="nofollow" href="https://freepik.com/" target="_blank">FreePik</a> and <a rel="nofollow" href="https://unsplash.com/" target="_blank">Unsplash</a> for images used in this template. We really appreciate these stock image websites for providing free photos to everyone.</p>
+                                        <p>En la temporada 2022-2023 hemos contado con un total de 11 equipos de Voleibol, de los cuales 6 han sido de categorías escolares y 5 de ellos, federados:</p>
+                                        <ul>
+                                            <li>3 equipos infantiles femeninos</li>
+                                            <li>2 equipos infantiles masculinos</li>
+                                            <li>1 equipo cadete femenino</li>
+                                            <li>1 equipo juvenil femenino</li>
+                                            <li>1 equipo junior femenino</li>
+                                            <li>2 equipos sénior femeninos</li>
+                                            <li>1 equipo sénior masculino</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -52,13 +56,16 @@ const TabsSection = () => {
                                     </div>
 
                                     <div className="col-lg-5 col-12 m-auto">
-                                        <h3 className="mb-3">Fútbol Sala</h3>
-
-                                        <p>Wee want you to be happy with our Tween Agency services. Our digital agency is ready to serve you to grow your business in a healthy way.</p>
-
-                                        <p>This is Bootstrap 5 HTML template for your website provided by <a rel="nofollow" href="https://www.tooplate.com/" target="_blank">Tooplate</a>. You can download, edit and use this layout for your company website.</p>
-                                        
-                                        <p>Image credits go to <a rel="nofollow" href="https://freepik.com/" target="_blank">FreePik</a> and <a rel="nofollow" href="https://unsplash.com/" target="_blank">Unsplash</a> for images used in this template. We really appreciate these stock image websites for providing free photos to everyone.</p>
+                                        <p>En la temporada 2023-2024 contamos con equipos de Futbol Sala de las siguientes categorías:</p>
+                                        <ul>
+                                            <li>Senior A Masculino</li>
+                                            <li>Senior B Masculino</li>
+                                            <li>Juvenil Masculino</li>
+                                            <li>Cadete A Masculino</li>
+                                            <li>Cadete B Masculino</li>
+                                            <li>Infantil Femenino</li>
+                                            <li>Infantil Masculino</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

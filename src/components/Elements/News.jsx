@@ -11,7 +11,7 @@ const News = () => {
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias?per_page=4")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias?per_page=6")
         .then(response => {
           return response.json()
         })
@@ -35,7 +35,7 @@ const News = () => {
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
-                                  <div className="col-lg-3 col-md-6 col-12" key={user.id}>
+                                  <div className="col-lg-4 col-md-6 col-12" key={user.id}>
                                       <div className="work-thumb">
                                         <div className="work-image-wrap">
                                           <Link to={"/detalle/" + user.id} className="image-popup">

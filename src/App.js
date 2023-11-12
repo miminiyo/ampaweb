@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import {Helmet} from "react-helmet";
 import Favicon from "react-favicon";
 
+import { Link } from 'react-router-dom';
+
 
 import CookieConsent from "react-cookie-consent";
 
@@ -36,6 +38,7 @@ import Offerts from './components/Pages/Offerts/Offerts';
 import Junta from './components/Pages/Junta/Junta';
 import Newsall from './components/Pages/News/NewsAll';
 import Newsdetail from './components/Pages/Newsdetail/Newsdetail';
+import Charlas from './components/Pages/Charlas/Charlas';
 
 
 
@@ -45,13 +48,14 @@ const App = () => {
     <div> 
       <CookieConsent
         enableDeclineButton
+        declineButtonText="Declinar"
         location="bottom"
         buttonText="Aceptar"
         cookieName="myAwesomeCookieName2"
         style={{ background: "#2B373B" }}
-        buttonStyle={{ color: "#4e503b", fontSize: "14px" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "16px" }}
         expires={150}>
-        This website uses cookies to enhance the user experience.{" "}
+        Esta web utiliza cookies para mejorar la experiencia de usuario. Puedes consultar nuestra política de cookies <Link to="/politica-de-cookies">aquí</Link>.{" "}
       </CookieConsent>
       <Favicon url={icoFav} />
       <Helmet>
@@ -66,10 +70,12 @@ const App = () => {
             <Routes>
               <Route path="/" element={ <Home /> } />
               <Route path="ampa" element={ <Static /> } />
-              <Route path="Ofertas" element={ <Offerts /> } />
-              <Route path="Junta" element={ <Junta /> } />
-              <Route path="Noticias" element={ <Newsall /> } />
+              <Route path="ofertas" element={ <Offerts /> } />
+              <Route path="charlas" element={ <Charlas /> } />
+              <Route path="junta" element={ <Junta /> } />
+              <Route path="noticias" element={ <Newsall /> } />
               <Route path="detalle/:id" element={ <Newsdetail /> } />
+              <Route path="politica-de-cookies" element={ <Static /> } />
             </Routes>
           </SmoothScroll>
         </main>

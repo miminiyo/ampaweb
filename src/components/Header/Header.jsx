@@ -25,11 +25,15 @@ const handleSubmit = (event) => {
     return (
       <Nav variant="pills">
         <Nav.Item>
-          <Nav.Link as={NavLink} end to="/" eventKey="/">
+          <Nav.Link as={NavLink} end to="/" eventKey="/" onClick={(event) => handleSubmit(event)}>
             Inicio
           </Nav.Link>
         </Nav.Item>
-        <div className="nav-item"><a href={Constants.urlDom + "/wp-content/uploads/2023/10/estatutos_ampa_MCatalan.pdf"} target="_blank" rel="noreferrer" onClick={handleSubmit} className="nav-link">Estatutos</a></div>
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="charlas" eventKey="/charlas" onClick={(event) => handleSubmit(event)}>
+            Charlas
+          </Nav.Link>
+        </Nav.Item>
         <Nav.Item>
           <Nav.Link as={NavLink} to="ofertas" eventKey="/ofertas" onClick={(event) => handleSubmit(event)}>
             Ofertas

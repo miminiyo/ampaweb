@@ -18,16 +18,12 @@ const Pricing = () => {
                     <div className="col-lg-6 col-12 offset-lg-3">
                         <div className="pricing-plan bg-white">
                             <div className="d-flex flex-wrap align-items-center pricing-header">
-                                <i className="pricing-icon bi-person"></i>
-
                                 <div className="pricing-name">
                                     <h4>Precio</h4>
                                 </div>
-
                                 <div className="pricing-price">
-                                    <h4>33 €</h4>
+                                    <h4>30 €</h4>
                                 </div>
-
                             </div>
 
                             <div className="pricing-body">
@@ -35,11 +31,11 @@ const Pricing = () => {
                                 <ul className="pricing-list">
                                     <li className="pricing-list-item">Beneficios cuotas actividades deportivas</li>
                                     <li className="pricing-list-item">Ofertas para miembros en comercios asociados</li>
+                                    <li className="pricing-list-item">Talleres y actividades para familias</li>
                                 </ul>
+                                {/* <h5 className="mt-lg-5 mt-4 mb-3">Small to Mid-size Businesses</h5>
 
-                                <h5 className="mt-lg-5 mt-4 mb-3">Small to Mid-size Businesses</h5>
-
-                                <p>Everything you need for your digital marketing stuffs</p>
+                                <p>Everything you need for your digital marketing stuffs</p> */}
                             </div>
                         </div>
                     </div>

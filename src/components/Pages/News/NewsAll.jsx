@@ -33,7 +33,7 @@ const Newsall = () => {
                             {users.length > 0 && (
                               <div className="row">
                                 {users.map(user => (
-                                  <div className="col-lg-3 col-md-6 col-12" data-id={user.id} key={user.id}>
+                                  <div className="col-lg-4 col-md-6 col-12" data-id={user.id} key={user.id}>
                                       <div className="work-thumb">
                                           <div className="work-image-wrap">
                                             <Link to={"/detalle/" + user.id} className="image-popup">

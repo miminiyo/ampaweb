@@ -5,7 +5,7 @@ import News from "../../Elements/News"
 import Pricing from "../../Elements/Pricing"
 import Contact from "../../Elements/Contact"
 import Kpi from "../../Elements/Kpi"
-
+import NextCharla from "../../Elements/NextCharla"
 
 const Home = () => {
 
@@ -15,7 +15,7 @@ const Home = () => {
             <TabsSection/>
             <Offert/>
             <News/>
-            
+            <NextCharla/>
             <Pricing/>
             
         </div>

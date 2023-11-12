@@ -25,7 +25,7 @@ const Bannerhero = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="heroText">
-                                    <h1>AMPA<br/>IES Miguel Catalán</h1>
+                                    <h1>Charlas<br/>para la familia</h1>
                                     {/* <a href="https://www.youtube.com/watch?v=AYaHuZ4BB6Y" className="popup-youtube play-icon-wrap d-flex align-items-center">
                                         <i className="bi-play play-icon"></i>
 
@@ -43,7 +43,7 @@ const Bannerhero = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="heroText">
-                                    <h1 className="text-white mb-lg-5 mb-4">AMPA<br/>IES Miguel Catalán</h1>
+                                    <h1>Ofertas<br/> para socios</h1>
                                 </div>
                             </div>
                         </div>

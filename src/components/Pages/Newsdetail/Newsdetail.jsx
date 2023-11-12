@@ -48,14 +48,14 @@ const Newsdetail = () => {
                                 <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" className="image-popup">
                                     <Image id={users.featured_media}/>
                                 </a>
-                                <p className="work-date">{users.x_date}</p>
                             </div>
                             <div className="work-text-info">
+                                <p className="work-date">{users.x_date}</p>
                                 <div className="mc-news-detail__content" dangerouslySetInnerHTML={{__html:users.content?.rendered}}></div>
                             </div>
                         </div> 
                     </div>
-                    <p><a href="/noticias" className="link">Volver a litado de noticias</a></p>
+                    <p><a href="/noticias" className="custom-btn">Volver a litado de noticias</a></p>
                 </div>
           </section>
 

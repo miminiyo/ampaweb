@@ -12,7 +12,7 @@ https://www.tooplate.com/view/2128-tween-agency
 -----------------------------------------*/
 :root {
   --white-color:                  #FFFFFF;
-  --primary-color:                #70a0e7;
+  --primary-color:                #5a2edf;
   --section-bg-color:             #f5f5f5;
   --border-color:                 #dee2e6;
   --dark-color:                   #000000;
@@ -137,15 +137,16 @@ a:hover {
 }
 
 .section-padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (max-width:767px){
-  .section-padding {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
+  
   .page-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .section-padding {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -277,8 +278,8 @@ button:focus:not(:focus-visible) {
   HERO              
 -----------------------------------------*/
 .hero .swiper-slide{
-  padding-top: 120px;
-  padding-bottom: 60px;
+  padding-top: 90px;
+  padding-bottom: 90px;
   position: relative;
   display: flex;
 }
@@ -313,12 +314,13 @@ button:focus:not(:focus-visible) {
   background: transparent;
   border-radius: 0;
   border: 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 4px solid transparent;
   color: var(--border-color);
   font-weight: var(--font-weight-bold);
   margin: auto;
   position: relative;
   top: 1px;
+  font-size: 1.2rem;
 }
 
 .nav-tabs .nav-link:hover,
@@ -476,8 +478,11 @@ button:focus:not(:focus-visible) {
   margin-bottom: 30px;
   margin-top: 0;
   transition: filter 0.5s;
+  flex: 1;
 }
-
+.work-image-wrap{
+  flex: 1;
+}
 
 
 .work-title {
@@ -489,20 +494,33 @@ button:focus:not(:focus-visible) {
 .work-image {
   border-radius: 0;
   transition: all 0.5s;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
   width: 100%;
   margin-bottom: 5px;
 }
+.mc-news .work-image {
+  background: url(../images/noimageavailable.png) center no-repeat;
+  background-size: cover;
+}
+
 .work-detail{
   margin-bottom: 30px;
 }
+@media screen and (min-width:768px) {
+  .work-detail{
+    display: flex;
+    gap: 50px;
+  }
+}
+
 .work-detail .work-image{
-  height: 260px;
+  height: auto;
+  flex: 1;
 }
 .work-date{
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 .work-tag {
   border-radius: 100px;
@@ -584,19 +602,22 @@ button:focus:not(:focus-visible) {
 
 .pricing-header {
   border-bottom: 1px solid #dee2e6;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .pricing-icon {
   font-size: 45px;
 }
 
-.pricing-name {
-  margin-left: 50px;
-}
+
 
 .pricing-price {
   margin-left: auto;
+}
+
+.pricing-price h4{
+  font-size: 44px;
+  color: #5a2edf;
 }
 
 .pricing-recommend {
@@ -624,8 +645,7 @@ button:focus:not(:focus-visible) {
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-light);
   line-height: normal;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 /*---------------------------------------
@@ -654,11 +674,19 @@ button:focus:not(:focus-visible) {
 .site-footer {
   background: var(--footer-bg-color);
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .site-footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer-bottom .legal-text{
+  text-align: center;
+}
+@media screen and (min-width:768px) {
+  .site-footer-bottom .legal-text{
+    text-align: right;
+  }
 }
 
 .tooplate-link a {
@@ -782,7 +810,6 @@ button:focus:not(:focus-visible) {
 
   .site-footer {
     padding-top: 70px;
-    padding-bottom: 50px;
   }
 
   .site-footer-bottom,
@@ -826,7 +853,7 @@ button:focus:not(:focus-visible) {
   }
 
   .pricing-price {
-    max-width: 45px;
+    /* max-width: 45px; */
     margin-right: auto;
   }
 }
