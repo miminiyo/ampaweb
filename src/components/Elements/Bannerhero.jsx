@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import Constants from '../../constants/Constants';
+
 import heroimage from '../../assets/images/bh1.webp'
 import heroimage2 from '../../assets/images/bh2.webp'
 import { Navigation, A11y } from 'swiper/modules';
@@ -20,12 +23,17 @@ const Bannerhero = () => {
                 pagination={{ clickable: true }}
                 >
                 <SwiperSlide>
+                    <div className="hero__mask"></div>
                     <img src={heroimage} className="hero__image"/>
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
                                 <div className="heroText">
-                                    <h1>Charlas<br/>para la familia</h1>
+                                    <h1>
+                                      <Link to="charlas" rel="noreferrer">
+                                            Charlas<br/>para la familia
+                                        </Link>
+                                    </h1>
                                     {/* <a href="https://www.youtube.com/watch?v=AYaHuZ4BB6Y" className="popup-youtube play-icon-wrap d-flex align-items-center">
                                         <i className="bi-play play-icon"></i>
 
@@ -38,12 +46,17 @@ const Bannerhero = () => {
                     <div className="overlay"></div>
                 </SwiperSlide>
                 <SwiperSlide>
+                    <div className="hero__mask"></div>
                     <img src={heroimage2} className="hero__image"/>
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
                                 <div className="heroText">
-                                    <h1>Ofertas<br/> para socios</h1>
+                                    <h1>
+                                      <Link to="ofertas" rel="noreferrer">
+                                        Ofertas<br/> para socios
+                                      </Link>
+                                      </h1>
                                 </div>
                             </div>
                         </div>

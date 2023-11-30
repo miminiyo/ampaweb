@@ -46,7 +46,9 @@ const Offert = () => {
                                       <img src={user.x_featured_media_medium}/>
                                       <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>
                                       <p className="mc-offert__location">{user.x_metadata.ubicacion}</p>
-                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={Constants.urlDom + user.x_metadata.PDF} rel="noreferrer">Ver Oferta</a>
+                                      <Link to={Constants.urlDom + user.x_metadata.PDF} rel="noreferrer" className="custom-btn custom-bg-dark btn" target="_blank">
+                                        Ver Oferta
+                                      </Link>
                                     </div>
                                   </div>
                                 ))}

@@ -1,4 +1,4 @@
 
 export default{
-    urlDom: 'http://datos.ampamiguelcatalan.com',
+    urlDom: 'https://datos.ampamiguelcatalan.com',
 }

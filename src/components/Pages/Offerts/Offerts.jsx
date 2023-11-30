@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-
+import { Link } from "react-router-dom"
 import Constants from "../../../constants/Constants"
 
 import Image from "../../Elements/Image"
@@ -43,7 +43,7 @@ const Offerts = () => {
                                       <Image id={user.featured_media}/>
                                       <p className="mc-offert__name"><strong>{user.title.rendered}</strong></p>
                                       <p className="mc-offert__location">{user.x_metadata.ubicacion}</p>
-                                      <a className="custom-btn custom-bg-dark btn" target="_blank" href={Constants.urlDom + user.x_metadata.PDF} rel="noreferrer">Ver Oferta</a>
+                                      <Link to={Constants.urlDom + user.x_metadata.PDF} className="custom-btn custom-bg-dark btn" target="_blank" rel="noreferrer">Ver Oferta</Link>
                                     </div>
                                   </div>
                                 ))}

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
+import { Link } from "react-router-dom"
+
 import $ from 'jquery'
 
 import Constants from "../../../constants/Constants"
@@ -45,9 +47,9 @@ const Newsdetail = () => {
                     <div data-id={users.id} key={users.id}>
                         <div className="work-detail">
                             <div className="work-image-wrap">
-                                <a href="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" className="image-popup">
+                                <Link to="images/work/anthony-espinosa-pYQSM-p_0_c-unsplash.jpg" className="image-popup">
                                     <Image id={users.featured_media}/>
-                                </a>
+                                </Link>
                             </div>
                             <div className="work-text-info">
                                 <p className="work-date">{users.x_date}</p>
@@ -55,7 +57,9 @@ const Newsdetail = () => {
                             </div>
                         </div> 
                     </div>
-                    <p><a href="/noticias" className="custom-btn">Volver a litado de noticias</a></p>
+                    <p>
+                      <Link to="noticias" className="custom-btn">Volver a litado de noticiasa</Link>
+                    </p>
                 </div>
           </section>
 
