@@ -1,7 +1,7 @@
 import voleibol from '../../assets/images/Cadete-C-Voleibol.webp'
 import futsal from '../../assets/images/Juvenil-B-Futsal.webp'
 
-
+import Instagram from '@mui/icons-material/Instagram'
 
 const TabsSection = () => {
 
@@ -45,6 +45,11 @@ const TabsSection = () => {
                                             <li>2 equipos sénior femeninos</li>
                                             <li>1 equipo sénior masculino</li>
                                         </ul>
+                                        <p className='Instagram'>
+                                            <a href='https://www.instagram.com/miguelcatalan.voleibol/' target='_blank'>
+                                            Siguenos en  <Instagram/>
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

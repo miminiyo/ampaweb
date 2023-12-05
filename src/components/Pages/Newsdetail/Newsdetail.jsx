@@ -58,7 +58,7 @@ const Newsdetail = () => {
                         </div> 
                     </div>
                     <p>
-                      <Link to="noticias" className="custom-btn">Volver a litado de noticiasa</Link>
+                      <Link to="noticias" className="custom-btn">Volver a litado de noticias</Link>
                     </p>
                 </div>
           </section>

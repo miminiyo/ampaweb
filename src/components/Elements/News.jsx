@@ -11,7 +11,7 @@ const News = () => {
 
   
     const fetchUserData = () => {
-      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias?per_page=6")
+      fetch(Constants.urlDom + "/wp-json/wp/v2/noticias?per_page=3")
         .then(response => {
           return response.json()
         })
